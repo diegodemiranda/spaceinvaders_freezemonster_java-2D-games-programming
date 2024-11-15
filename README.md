@@ -2,11 +2,10 @@
 
 ## Visão Geral
 
-Este projeto contém dois jogos baseados em Java: Freeze Monster e Space Invaders. Cada jogo possui sua própria lógica e utiliza o padrão de design Factory Method para criar instâncias de objetos do jogo.
+Este projeto contém dois jogos baseados em Java: Freeze Monster e Space Invaders. Cada jogo possui sua própria lógica e utiliza o padrão de design Factory Method para criar instâncias de objetos do jogo. Ambos foram desenvolvidos para a conclusão da disciplina de Princípios e Padrões de Projeto na Faculdade de Computação.
 
 ## Estrutura do Projeto
 
-- **`TrabalhoFinal.iml`**: Arquivo de módulo do IntelliJ IDEA que define a estrutura e as configurações do projeto.
 - **`BadnessBoxSprite.java`**: Contêiner para objetos `BadSprite`, permitindo agrupar vários sprites ruins.
 - **`BadSprite.java`**: Classe abstrata representando um sprite ruim genérico com comportamentos e propriedades básicas.
 - **`FreezeBeam.java`**: Implementa um tipo específico de `BadSprite` que representa um raio congelante.
