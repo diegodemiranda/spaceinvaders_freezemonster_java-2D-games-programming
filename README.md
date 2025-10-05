@@ -1,74 +1,74 @@
-# Freeze Monster e Space Invaders
+# Freeze Monster and Space Invaders
 
-## Visão Geral
+## Overview
 
-Este projeto contém dois jogos baseados em Java: Freeze Monster e Space Invaders. Cada jogo possui sua própria lógica e utiliza o padrão de design Factory Method para criar instâncias de objetos do jogo. Ambos foram desenvolvidos para a conclusão da disciplina de Princípios e Padrões de Projeto na Faculdade de Computação.
+This project contains two Java-based games: Freeze Monster and Space Invaders. Each game has its own logic and uses the Factory Method design pattern to create instances of objects [...]
 
-## Estrutura do Projeto
+## Project Structure
 
-- **`BadnessBoxSprite.java`**: Contêiner para objetos `BadSprite`, permitindo agrupar vários sprites ruins.
-- **`BadSprite.java`**: Classe abstrata representando um sprite ruim genérico com comportamentos e propriedades básicas.
-- **`FreezeBeam.java`**: Implementa um tipo específico de `BadSprite` que representa um raio congelante.
-- **`Slime.java`**: Implementa um tipo específico de `BadSprite` que representa gosma.
-- **`Woody.java`**: Estende a classe `Player` para representar o personagem jogador Woody.
-- **`FreezeMonsterBoard.java`**: Gerencia a lógica do jogo "Freeze Monster".
-- **`Bomb.java`**: Implementa um tipo específico de `BadSprite` que representa uma bomba.
-- **`BomberSprite.java`**: Estende `BadnessBoxSprite` para representar um sprite bombardeiro.
-- **`Shot.java`**: Implementa um tipo específico de `BadSprite` que representa um tiro disparado pelo jogador.
-- **`SpaceInvadersBoard.java`**: Gerencia a lógica do jogo "Space Invaders".
-- **`Player.java`**: Representa um personagem jogador genérico.
-- **`MainFrame.java`**: Configura a janela principal do jogo.
-- **`Sprite.java`**: Classe base para todos os sprites.
-- **`Commons.java`**: Interface que define constantes usadas em todo o projeto.
-- **`FreezeMonsterGame.java`**: Classe principal que inicializa o jogo "Freeze Monster".
-- **`SpaceInvadersGame.java`**: Classe principal que inicializa o jogo "Space Invaders".
-- **`AbstractBoard.java`**: Classe abstrata que define a estrutura básica de um tabuleiro de jogo.
+- **`BadnessBoxSprite.java`**: Container for `BadSprite` objects, allowing multiple bad sprites to be grouped.
+- **`BadSprite.java`**: Abstract class representing a generic bad sprite with basic behaviors and properties.
+- **`FreezeBeam.java`**: Implements a specific type of `BadSprite` that represents a freezing ray.
+- **`Slime.java`**: Implements a specific type of `BadSprite` that represents slime.
+- **`Woody.java`**: Extends the `Player` class to represent the player character Woody.
+- **`FreezeMonsterBoard.java`**: Manages the game logic of "Freeze Monster".
+- **`Bomb.java`**: Implements a specific type of `BadSprite` that represents a bomb.
+- **`BomberSprite.java`**: Extends `BadnessBoxSprite` to represent a bomber sprite.
+- **`Shot.java`**: Implements a specific type of `BadSprite` that represents a shot fired by the player.
+- **`SpaceInvadersBoard.java`**: Manages the game logic of "Space Invaders".
+- **`Player.java`**: Represents a generic player character.
+- **`MainFrame.java`**: Configures the game's main window.
+- **`Sprite.java`**: Base class for all sprites.
+- **`Commons.java`**: Interface that defines constants used throughout the project.
+- **`FreezeMonsterGame.java`**: Main class that initializes the "Freeze Monster" game.
+- **`SpaceInvadersGame.java`**: Main class that initializes the "Space Invaders" game.
+- **`AbstractBoard.java`**: Abstract class that defines the basic structure of a game board.
 
-## Padrão Factory Method
+## Factory Method Pattern
 
-O padrão Factory Method é utilizado para criar instâncias de objetos do jogo sem especificar a classe exata do objeto a ser criado, promovendo flexibilidade e reutilização do código.
+The Factory Method pattern is used to create instances of game objects without specifying the exact class of the object to be created, promoting flexibility and code reuse.
 
-### Classes Principais
+### Main Classes
 
-- **`AbstractBoard`**: Define métodos abstratos `createPlayers` e `createPlayer`.
-- **`FreezeMonsterBoard`**: Implementa `createPlayer` para criar uma instância de `Woody`.
-- **`MainFrame`**: Define o método abstrato `createBoard`.
-- **`FreezeMonsterGame`**: Implementa `createBoard` para criar uma instância de `FreezeMonsterBoard`.
-- **`SpaceInvadersGame`**: Implementa `createBoard` para criar uma instância de `SpaceInvadersBoard`.
+- **`AbstractBoard`**: Defines abstract methods `createPlayers` and `createPlayer`.
+- **`FreezeMonsterBoard`**: Implements `createPlayer` to create an instance of `Woody`.
+- **`MainFrame`**: Defines the abstract method `createBoard`.
+- **`FreezeMonsterGame`**: Implements `createBoard` to create an instance of `FreezeMonsterBoard`.
+- **`SpaceInvadersGame`**: Implements `createBoard` to create an instance of `SpaceInvadersBoard`.
 
-## Jogos
+## Games
 
 ### Freeze Monster
 
-No jogo Freeze Monster, o jogador controla o personagem Woody para navegar pelo tabuleiro, evitando ou interagindo com vários sprites como raios congelantes, gosmas e bombas.
+In the Freeze Monster game, the player controls the character Woody to navigate the board, avoiding or interacting with various sprites such as freezing rays, slimes, and bombs.
 
-#### Como Executar
+#### How to Run
 
-1. Clone o repositório para sua máquina local.
-2. Abra o projeto no IntelliJ IDEA.
-3. Certifique-se de que todas as dependências estão resolvidas.
-4. Execute a classe `FreezeMonsterGame` para iniciar o jogo Freeze Monster.
+1. Clone the repository to your local machine.
+2. Open the project in IntelliJ IDEA.
+3. Make sure all dependencies are resolved.
+4. Run the `FreezeMonsterGame` class to start the Freeze Monster game.
 
-#### Controles
+#### Controls
 
-- **Setas do Teclado**: Movem Woody para cima, baixo, esquerda ou direita.
+- **Arrow Keys**: Move Woody up, down, left, or right.
 
 ### Space Invaders
 
-No jogo Space Invaders, o jogador controla um canhão para atirar em invasores espaciais que descem pelo tabuleiro.
+In the Space Invaders game, the player controls a cannon to shoot at space invaders descending down the board.
 
-#### Como Executar
+#### How to Run
 
-1. Clone o repositório para sua máquina local.
-2. Abra o projeto no IntelliJ IDEA.
-3. Certifique-se de que todas as dependências estão resolvidas.
-4. Execute a classe `SpaceInvadersGame` para iniciar o jogo Space Invaders.
+1. Clone the repository to your local machine.
+2. Open the project in IntelliJ IDEA.
+3. Make sure all dependencies are resolved.
+4. Run the `SpaceInvadersGame` class to start the Space Invaders game.
 
-#### Controles
+#### Controls
 
-- **Setas do Teclado**: Movem o canhão para a esquerda ou direita.
-- **Barra de Espaço**: Dispara tiros.
+- **Arrow Keys**: Move the cannon left or right.
+- **Spacebar**: Fires shots.
 
-## Licença
+## License
 
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
